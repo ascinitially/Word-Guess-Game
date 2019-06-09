@@ -107,6 +107,8 @@
             if (correctGuesses === randomWord.length) {
                 alert("You win!");
                 wins++;
+                    $("#images").empty();
+                    $("#images").append('<img src="assets/images/newGame.png.jpg" style="height:400px; align-content: center">')
                 start();
             }
             else if(guessesLeft === 0) {
@@ -122,7 +124,6 @@
             if(alreadyGuessed.indexOf(userGuesses) > -1) {
                         alert("You already guessed that!");
                     }
-            
             
             
 
@@ -146,11 +147,45 @@
                 wrongGuesses.push(userGuesses);
                 // console.log(wrongGuesses);
                 guessesLeft--;
+                if (guessesLeft === 8) {
+                    $("#images").empty();
+                    $("#images").append('<img src="assets/images/1.jpg" style="height:400px; align-content: center">')
+                };
+                if (guessesLeft === 7) {
+                    $("#images").empty();
+                    $("#images").append('<img src="assets/images/2.jpg" style="height:400px; align-content: center">')
+                };
+                if (guessesLeft === 6) {
+                    $("#images").empty();
+                    $("#images").append('<img src="assets/images/3.jpg" style="height:400px; align-content: center">')
+                };
+                if (guessesLeft === 5) {
+                    $("#images").empty();
+                    $("#images").append('<img src="assets/images/4.jpg" style="height:400px; align-content: center">')
+                };
+                if (guessesLeft === 4) {
+                    $("#images").empty();
+                    $("#images").append('<img src="assets/images/5.jpg" style="height:400px; align-content: center">')
+                };
+                if (guessesLeft === 3) {
+                    $("#images").empty();
+                    $("#images").append('<img src="assets/images/6.jpg" style="height:400px; align-content: center">')
+                };
+                if (guessesLeft === 2) {
+                    $("#images").empty();
+                    $("#images").append('<img src="assets/images/7.jpg" style="height:400px; align-content: center">')
+                };
+                if (guessesLeft === 1) {
+                    $("#images").empty();
+                    $("#images").append('<img src="assets/images/8.jpg" style="height:400px; align-content: center">')
+                };
+                if (guessesLeft === 0) {
+                    $("#images").empty();
+                    $("#images").append('<img src="assets/images/9.jpg" style="height:400px; align-content: center">')
+                }
+
                 alreadyGuessed.push(userGuesses);
                 result();
-                // if(guessesLeft === 8) {
-                //     document.getElementById('images').innerHTML('<img src="assets/images/1.jpg" style="height:400px; align-content: center">')
-                // }
 
             }
 
